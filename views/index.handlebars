@@ -23,19 +23,18 @@
 			</ul>		
 	</div>
   <div>
-  </section>
-  <section id="devoured-hamburgers">
-    <ul>
-      {{#each burgers}}
-        {{#if this.devoured}}
-          <li class="devour-burger">
-            {{this.id}}
-            {{this.burger_name}}
-          </li>
-        {{/if}}
-      {{/each}}
-    </ul>
-    </div>
+<div class="col-md-6" id="devoured">
+		<h3>Burgers that have been devoured!</h3>
+		<br>
+		<ul>
+		{{#each burger_data}}  {{#if this.devoured}}
+		<li>
+			<input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+			</li>
+			{{/if}}
+		{{/each}}
+		</ul>
+	</div>	
     <div>
   </section>
   <section id ="new-burger">
